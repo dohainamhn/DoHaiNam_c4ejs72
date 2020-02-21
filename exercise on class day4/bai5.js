@@ -4,7 +4,8 @@ const products = [
         Brand: 'xiaomi',
         Price: 428,
         Color: 'White',
-        Category: 'Charger',  
+        Category: 'Charger',
+        Providers:'Phukienzero Dientuccc'
     },
     sp2 ={
         name:'VSmart Active 1',
@@ -12,6 +13,7 @@ const products = [
         Price: 5487,
         Color: 'Black',
         Category: 'Phone',
+        Providers:'Tgdd Ddghn Ddghn',
     },
     sp3 ={
         name:'IPhone X',
@@ -19,6 +21,7 @@ const products = [
         Price: 21490,
         Color: 'Gray',
         Category: 'Phone',
+        Providers:'Tgdd',
     },
     sp4 ={
         name:'Samsung Galaxy A9',
@@ -26,6 +29,7 @@ const products = [
         Price: 8490,
         Color: 'Blue',
         Category: 'Phone',
+        Providers:'Tgdd',
     },
 ]
 function b5_1()
@@ -64,11 +68,7 @@ function b5_3()
 }
 function b5_4And5_5()
 {
-    const provider = ['Phukienzero Dientuccc','Tgdd Ddghn VhStore','tgdd','tgdd']
-    for(let i =0; i<products.length; i++)
-    {
-        products[i]['provider'] = provider[i]
-    }
+    const provider = ['Phukienzero','Dientuccc','Ddghn','VhStore','Tgdd']
     for(let i =0; i<products.length;i++)
     {
         console.log('#'+i+'.'+products[i].name)
@@ -77,15 +77,20 @@ function b5_4And5_5()
     }
     let a = prompt("moi nhap provider:")
     console.clear()
+    if(provider.indexOf(a,0) < 0)
+    {
+        alert("Nhập sai nhà cung cấp !")
+    }
     for(let i =0;i<products.length;i++)
     {
-        if(a === products[i].provider)
+        let b = products[i]['Providers'].includes(a,0)
+        if(b)
         {
+            console.log("Tb:"+i)
             for(let x in products[i])
             {
                 console.log(x,products[i][x])
             }
-            
         }
     }
 }

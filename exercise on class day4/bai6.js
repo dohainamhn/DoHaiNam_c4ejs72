@@ -36,6 +36,17 @@ function checkif(x)
     }
     else return true;
 }
+function b6_6()
+{
+    for(let i= 0; i < learningTask.length; i++)
+    {   
+        if(learningTask[i]['complete'])
+        {   
+            console.log(`${i+1}. [x] ${learningTask[i].name}`)
+        }
+        else console.log(`${i+1}. [ ] ${learningTask[i].name}`)
+    }
+}
 function b6_2_3_4_5()
 {
     b6_1()
@@ -83,6 +94,6 @@ function b6_2_3_4_5()
         
     }
     console.clear()
-    b6_1()
+    b6_6()
 }
-b6_2_3_4_5()
+b6_2_3_4_5();
