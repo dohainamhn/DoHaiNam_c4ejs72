@@ -2,7 +2,7 @@ clear()
 home()
 penwidth(1)
 setshape("rocket")
-rt(90)
+
 const cmds = [
     {
         shape: 'square',
@@ -63,10 +63,10 @@ const cmds = [
     },
     {
         shape: 'square',
-        penWidth: 5,
-        x: 200,
-        y: 150,
-        width: 40,
+        penWidth: 1,
+        x: 500,
+        y: 500,
+        width: 15,
     },
 ]
 function draw(x,y)
@@ -80,14 +80,11 @@ function draw(x,y)
 
 for(let i = 0; i< cmds.length;i++)
 {
+    rt(90)
+    draw(cmds[i].x,cmds[i].y)
     if(cmds[i].shape === 'square')
     {   
-        if(cmds[i].hasOwnProperty('penWidth'))
-        {
-            penwidth(cmds[i].penWidth)
-        }
         let width = cmds[i].width
-        draw(cmds[i].x,cmds[i].y)
         for(let i =0;i<4;i++)
         {
             fd(width)
@@ -96,8 +93,7 @@ for(let i = 0; i< cmds.length;i++)
     }else {
         let width = cmds[i].width
         let height = cmds[i].height
-        draw(cmds[i].x,cmds[i].y)
-        for(let i =1;i<=4;i++)
+        for(let i =0;i<4;i++)
         {
             if(i%2==0)
             {
