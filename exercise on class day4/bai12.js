@@ -82,10 +82,6 @@ for(let i = 0; i< cmds.length;i++)
 {
     if(cmds[i].shape === 'square')
     {   
-        if(cmds[i].hasOwnProperty('penWidth'))
-        {
-            penwidth(cmds[i].penWidth)
-        }
         let width = cmds[i].width
         draw(cmds[i].x,cmds[i].y)
         for(let i =0;i<4;i++)
@@ -112,13 +108,12 @@ for(let i = 0; i< cmds.length;i++)
         }
     }else
     {
-        draw(cmds[i].x,cmds[i].y)
-        for(let i = 0; i < 100; i++)
-        {
-            fd(5)
-            lt(360/100)
-        }
-
-    }
+        let radius = cmds[i].radius
+        for (var i = 0; i < 360; i++) {
+            fd(radius*3.14/360);
+            rt(1);
+          }
+      }
+      home()
 }
         
