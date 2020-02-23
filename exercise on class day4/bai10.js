@@ -71,6 +71,7 @@ const cmds = [
 ]
 function draw(x,y)
 {
+    rt(90)
     penup()
     fd(x)
     lt(90)
@@ -80,11 +81,14 @@ function draw(x,y)
 
 for(let i = 0; i< cmds.length;i++)
 {
-    rt(90)
-    draw(cmds[i].x,cmds[i].y)
     if(cmds[i].shape === 'square')
     {   
+        if(cmds[i].hasOwnProperty('penWidth'))
+        {
+            penwidth(cmds[i].penWidth)
+        }
         let width = cmds[i].width
+        draw(cmds[i].x,cmds[i].y)
         for(let i =0;i<4;i++)
         {
             fd(width)
@@ -93,7 +97,8 @@ for(let i = 0; i< cmds.length;i++)
     }else {
         let width = cmds[i].width
         let height = cmds[i].height
-        for(let i =0;i<4;i++)
+        draw(cmds[i].x,cmds[i].y)
+        for(let i =1;i<=4;i++)
         {
             if(i%2==0)
             {
@@ -106,5 +111,6 @@ for(let i = 0; i< cmds.length;i++)
             }
         }
     }
+    home()
 }
         
