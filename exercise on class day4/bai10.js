@@ -5,68 +5,68 @@ setshape("rocket")
 
 const cmds = [
     {
+        shape: 'circle',
+        x: 0,
+        y: -20,
+        radius: 60,
+    },
+    {
+        shape: 'circle',
+        x: 0,
+        y: 80,
+        radius: 40,
+    },
+    {
+        shape: 'circle',
+        x: -75,
+        y: 10,
+        radius: 20,
+    },
+      {
+        shape: 'circle',
+        x: 75,
+        y: 10,
+        radius: 20,
+    },
+    {
         shape: 'square',
-        x: 20,
-        y: 40,
-        width: 50,
+        x: -65,
+        y: -100,
+        width: 30,
     },
-    {
-        shape: 'rect',
-        x: 8,
-        y: 70,
-        width: 12,
-        height: 40,
+      {
+        shape: 'square',
+        x: 38,
+        y: -100,
+        width: 30,
     },
-    {
+  
+  {
         shape: 'rect',
-        x: 70,
-        y: 70,
-        width: 12,
-        height: 40,
+        x: -30,
+        y: 80,
+        width: 20,
+        height: 4
     },
     {
         shape: 'rect',
         x: 10,
-        y: 20,
-        width: 70,
-        height: 20,
+        y: 80,
+        width: 20,
+        height: 4
     },
-    {
-        shape: 'square',
-        x: 25,
-        y: 40,
-        width: 14,
+      {
+        shape: 'rect',
+        x: -10,
+        y: 50,
+        width: 20,
+        height: 6
     },
-    {
+  {
         shape: 'square',
-        x: 33,
-        y: 42,
-        width: 6,
-    },
-    {
-        shape: 'square',
-        x: 50,
-        y: 40,
-        width: 14,
-    },
-    {
-        shape: 'square',
-        x: 58,
-        y: 42,
-        width: 6,
-    },
-    {
-        shape: 'square',
-        x: 40,
-        y: 25,
-        width: 8,
-    },
-    {
-        shape: 'square',
-        penWidth: 1,
         x: 500,
         y: 500,
-        width: 15,
+        width: 20,
     },
 ]
 function draw(x,y)
@@ -94,8 +94,8 @@ for(let i = 0; i< cmds.length;i++)
             fd(width)
             rt(90)
         }
-    }else {
-        let width = cmds[i].width
+    }else if(cmds[i].shape === 'rect'){
+        let width = cmds[i].widthgi
         let height = cmds[i].height
         draw(cmds[i].x,cmds[i].y)
         for(let i =1;i<=4;i++)
@@ -109,8 +109,16 @@ for(let i = 0; i< cmds.length;i++)
                 fd(height)
                 rt(90)
             }
-        }
+        } 
     }
+    else
+    {
+        let radius = cmds[i].radius
+        for (var i = 0; i < 360; i++) {
+            fd(radius*3.14/360);
+            rt(1);
+          }
+      }
     home()
 }
         
