@@ -1,16 +1,13 @@
 
 function getFrequencies(arr)
 {
-    let suma = 0;
-    let sumb = 0;
-    let A_B = {}
+    let object = {}
     arr.forEach(function(value)
     {
-        if(value === 'A') suma++;
-        else sumb ++;
+        if(!object[value]) object[value] = 1
+        else object[value] ++
     })
-    A_B['A'] = suma;
-    A_B['B'] = sumb;
-    return A_B;
+    return object;
 }
-console.log(getFrequencies(["A", "B", "A", "A", "A"]))
+console.log(getFrequencies(["A", "B", "c", "c", "A","C","T"]))
+
