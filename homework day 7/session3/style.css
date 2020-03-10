@@ -1,0 +1,13 @@
+.input{
+    width: 300px;
+    font-size: large;
+}
+table{
+    width: 802px;
+    font-size: x-large;
+}
+button{
+    border: groove  ;
+    border-radius: 5px;
+    background-color: white;
+}

@@ -1,0 +1,30 @@
+*{
+    margin: 4px;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+#item2 h2{
+    font-size: 20px;
+    font-weight: bold;
+    float: right;
+}
+button{
+    font-size: 20px;
+    border: transparent;
+    width: 60px;
+    height: 25px;
+    background-color:rgb(206, 201, 201);
+}
+input{
+    width: 120px;
+    text-align: end;
+}
