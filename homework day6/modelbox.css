@@ -1,0 +1,32 @@
+/* div{
+    width: 200px;
+    height:200px;
+    background:wheat;
+    font-size:30px;
+    text-align:center;
+    line-height:200px;
+    /* code vào phần bên dưới   */
+     /* border: blue solid 3px;
+    border-radius: 10%;
+  }  */
+  .hello{
+    background: wheat;
+    width:400px;
+    border: 2px solid green;
+  /*  Code vào phần bên dưới  */
+    padding: 45px 40px;
+  }
+  #a >div {
+    background:wheat;
+    /*  code vào phần bên dưới   */
+     
+  }
+  
+  
+  
+  
+  
+  #a{
+    /* Không code vào đây */
+    border:1px solid black
+  }

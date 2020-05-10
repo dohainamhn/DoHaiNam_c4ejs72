@@ -12,4 +12,4 @@ function mapLetters(string)
     }
     return object
 }
-console.log(mapLetters('dodo'))
+console.log(mapLetters('dododododo'))

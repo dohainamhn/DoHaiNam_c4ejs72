@@ -1,0 +1,9 @@
+#section1 {
+    color: red;
+}
+#section2 #line1{
+    color: green;
+}
+.section3 .color {
+    color: blue;
+}
